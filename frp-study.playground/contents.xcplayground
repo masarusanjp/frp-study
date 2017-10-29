@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <playground version='6.0' target-platform='ios'>
     <pages>
-        <page name='Untitled Page 2'/>
         <page name='1-1 Listener of a Observer Pattern'/>
         <page name='1-2 frp airline'/>
         <page name='2-6 merge'/>
         <page name='2-6 merge shape select'/>
+        <page name='2-7 hold'/>
     </pages>
 </playground>

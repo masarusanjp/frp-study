@@ -113,6 +113,6 @@ class Frp2_6MergeViewController: UIViewController {
     }
 }
 
-PlaygroundPage.current.liveView = Frp2_6MergeViewController(nibName: nil, bundle: nil)
+660
 
 //: [Next](@next)
