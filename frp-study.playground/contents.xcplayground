@@ -6,5 +6,6 @@
         <page name='2-6 merge'/>
         <page name='2-6 merge shape select'/>
         <page name='2-7 hold'/>
+        <page name='2-9 accumulator'/>
     </pages>
 </playground>
