@@ -1,0 +1,23 @@
+PODS:
+  - RxCocoa (4.0.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.0.0)
+  - RxTest (4.0.0):
+    - RxSwift (~> 4.0)
+  - SodiumSwift (1.0.0)
+
+DEPENDENCIES:
+  - RxCocoa
+  - RxSwift
+  - RxTest
+  - SodiumSwift
+
+SPEC CHECKSUMS:
+  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
+  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
+  RxTest: 0041e792cede35e53e4749f378d21482af0e9d12
+  SodiumSwift: 5f998cba9063df81714a50ab84ea68e371c1ff85
+
+PODFILE CHECKSUM: 76c8c4eb01ac8265c6488d3780308cd231523752
+
+COCOAPODS: 1.3.1
