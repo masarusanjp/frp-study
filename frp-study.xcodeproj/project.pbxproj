@@ -1,0 +1,958 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		111927FF1F7F5C10004F1F52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111927FE1F7F5C10004F1F52 /* AppDelegate.swift */; };
+		111928011F7F5C10004F1F52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111928001F7F5C10004F1F52 /* ViewController.swift */; };
+		111928041F7F5C10004F1F52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111928021F7F5C10004F1F52 /* Main.storyboard */; };
+		111928061F7F5C10004F1F52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111928051F7F5C10004F1F52 /* Assets.xcassets */; };
+		111928091F7F5C10004F1F52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111928071F7F5C10004F1F52 /* LaunchScreen.storyboard */; };
+		111928141F7F5C11004F1F52 /* frp_studyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111928131F7F5C11004F1F52 /* frp_studyTests.swift */; };
+		1119281F1F7F5C11004F1F52 /* frp_studyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1119281E1F7F5C11004F1F52 /* frp_studyUITests.swift */; };
+		CCD9556ACE32A8D9A3A10953 /* Pods_frp_study.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1ED3930A01E25DBCB032E9 /* Pods_frp_study.framework */; };
+		DA9E3D59C5B13281544CFD29 /* Pods_frp_studyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1478FAB11A6AA47AE9E4E0E9 /* Pods_frp_studyTests.framework */; };
+		FD9DF4F925BF56C3A9AED2C0 /* Pods_frp_studyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19C998ABE141646A95755AE /* Pods_frp_studyUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		111928101F7F5C11004F1F52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 111927F31F7F5C10004F1F52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 111927FA1F7F5C10004F1F52;
+			remoteInfo = "frp-study";
+		};
+		1119281B1F7F5C11004F1F52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 111927F31F7F5C10004F1F52 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 111927FA1F7F5C10004F1F52;
+			remoteInfo = "frp-study";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D8BF479F986DD43EDCCC201 /* Pods-frp-with-ui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frp-with-ui.debug.xcconfig"; path = "Pods/Target Support Files/Pods-frp-with-ui/Pods-frp-with-ui.debug.xcconfig"; sourceTree = "<group>"; };
+		111927FB1F7F5C10004F1F52 /* frp-study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "frp-study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		111927FE1F7F5C10004F1F52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		111928001F7F5C10004F1F52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		111928031F7F5C10004F1F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		111928051F7F5C10004F1F52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		111928081F7F5C10004F1F52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1119280A1F7F5C10004F1F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1119280F1F7F5C11004F1F52 /* frp-studyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "frp-studyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		111928131F7F5C11004F1F52 /* frp_studyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frp_studyTests.swift; sourceTree = "<group>"; };
+		111928151F7F5C11004F1F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1119281A1F7F5C11004F1F52 /* frp-studyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "frp-studyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1119281E1F7F5C11004F1F52 /* frp_studyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frp_studyUITests.swift; sourceTree = "<group>"; };
+		111928201F7F5C11004F1F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11CAD8991F9CC65E00B6A8DB /* frp-with-uiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "frp-with-uiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11CAD8A41F9CC65E00B6A8DB /* frp-with-uiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "frp-with-uiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11F33B111F7F6772000F691C /* frp-study.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "frp-study.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		1478FAB11A6AA47AE9E4E0E9 /* Pods_frp_studyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frp_studyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CB63065561432CB7D6CBA12 /* Pods-frp-study.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frp-study.debug.xcconfig"; path = "Pods/Target Support Files/Pods-frp-study/Pods-frp-study.debug.xcconfig"; sourceTree = "<group>"; };
+		6D1ED3930A01E25DBCB032E9 /* Pods_frp_study.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frp_study.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72CDE1362296DA425211A220 /* Pods-frp-study.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frp-study.release.xcconfig"; path = "Pods/Target Support Files/Pods-frp-study/Pods-frp-study.release.xcconfig"; sourceTree = "<group>"; };
+		74AA9067E946E434409F0CB5 /* Pods-frp-studyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frp-studyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-frp-studyTests/Pods-frp-studyTests.release.xcconfig"; sourceTree = "<group>"; };
+		7FCB944FF326FB960B298BCF /* Pods-frp-studyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frp-studyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-frp-studyUITests/Pods-frp-studyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D36BFF218D9A680A4753E60 /* Pods_frp_with_ui.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frp_with_ui.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D5E48F7A5A61765A92E0EEB /* Pods-frp-with-ui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frp-with-ui.release.xcconfig"; path = "Pods/Target Support Files/Pods-frp-with-ui/Pods-frp-with-ui.release.xcconfig"; sourceTree = "<group>"; };
+		A9EDD15C014E36E3A4D5B2E7 /* Pods-frp-studyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frp-studyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-frp-studyUITests/Pods-frp-studyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CE9C680D5884475681097AB2 /* Pods-frp-studyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frp-studyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-frp-studyTests/Pods-frp-studyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E19C998ABE141646A95755AE /* Pods_frp_studyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frp_studyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		111927F81F7F5C10004F1F52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCD9556ACE32A8D9A3A10953 /* Pods_frp_study.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1119280C1F7F5C11004F1F52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9E3D59C5B13281544CFD29 /* Pods_frp_studyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		111928171F7F5C11004F1F52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FD9DF4F925BF56C3A9AED2C0 /* Pods_frp_studyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11CAD8961F9CC65E00B6A8DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11CAD8A11F9CC65E00B6A8DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		111927F21F7F5C10004F1F52 = {
+			isa = PBXGroup;
+			children = (
+				11F33B111F7F6772000F691C /* frp-study.playground */,
+				111927FD1F7F5C10004F1F52 /* frp-study */,
+				111928121F7F5C11004F1F52 /* frp-studyTests */,
+				1119281D1F7F5C11004F1F52 /* frp-studyUITests */,
+				111927FC1F7F5C10004F1F52 /* Products */,
+				B8FAE9A743273051B003128C /* Pods */,
+				D78DAC8C7FC52E6430A36150 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		111927FC1F7F5C10004F1F52 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				111927FB1F7F5C10004F1F52 /* frp-study.app */,
+				1119280F1F7F5C11004F1F52 /* frp-studyTests.xctest */,
+				1119281A1F7F5C11004F1F52 /* frp-studyUITests.xctest */,
+				11CAD8991F9CC65E00B6A8DB /* frp-with-uiTests.xctest */,
+				11CAD8A41F9CC65E00B6A8DB /* frp-with-uiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		111927FD1F7F5C10004F1F52 /* frp-study */ = {
+			isa = PBXGroup;
+			children = (
+				111927FE1F7F5C10004F1F52 /* AppDelegate.swift */,
+				111928001F7F5C10004F1F52 /* ViewController.swift */,
+				111928021F7F5C10004F1F52 /* Main.storyboard */,
+				111928051F7F5C10004F1F52 /* Assets.xcassets */,
+				111928071F7F5C10004F1F52 /* LaunchScreen.storyboard */,
+				1119280A1F7F5C10004F1F52 /* Info.plist */,
+			);
+			path = "frp-study";
+			sourceTree = "<group>";
+		};
+		111928121F7F5C11004F1F52 /* frp-studyTests */ = {
+			isa = PBXGroup;
+			children = (
+				111928131F7F5C11004F1F52 /* frp_studyTests.swift */,
+				111928151F7F5C11004F1F52 /* Info.plist */,
+			);
+			path = "frp-studyTests";
+			sourceTree = "<group>";
+		};
+		1119281D1F7F5C11004F1F52 /* frp-studyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1119281E1F7F5C11004F1F52 /* frp_studyUITests.swift */,
+				111928201F7F5C11004F1F52 /* Info.plist */,
+			);
+			path = "frp-studyUITests";
+			sourceTree = "<group>";
+		};
+		B8FAE9A743273051B003128C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CB63065561432CB7D6CBA12 /* Pods-frp-study.debug.xcconfig */,
+				72CDE1362296DA425211A220 /* Pods-frp-study.release.xcconfig */,
+				CE9C680D5884475681097AB2 /* Pods-frp-studyTests.debug.xcconfig */,
+				74AA9067E946E434409F0CB5 /* Pods-frp-studyTests.release.xcconfig */,
+				7FCB944FF326FB960B298BCF /* Pods-frp-studyUITests.debug.xcconfig */,
+				A9EDD15C014E36E3A4D5B2E7 /* Pods-frp-studyUITests.release.xcconfig */,
+				0D8BF479F986DD43EDCCC201 /* Pods-frp-with-ui.debug.xcconfig */,
+				9D5E48F7A5A61765A92E0EEB /* Pods-frp-with-ui.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D78DAC8C7FC52E6430A36150 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6D1ED3930A01E25DBCB032E9 /* Pods_frp_study.framework */,
+				1478FAB11A6AA47AE9E4E0E9 /* Pods_frp_studyTests.framework */,
+				E19C998ABE141646A95755AE /* Pods_frp_studyUITests.framework */,
+				9D36BFF218D9A680A4753E60 /* Pods_frp_with_ui.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		111927FA1F7F5C10004F1F52 /* frp-study */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 111928231F7F5C11004F1F52 /* Build configuration list for PBXNativeTarget "frp-study" */;
+			buildPhases = (
+				44B0CB28DFF78D0F50708F51 /* [CP] Check Pods Manifest.lock */,
+				111927F71F7F5C10004F1F52 /* Sources */,
+				111927F81F7F5C10004F1F52 /* Frameworks */,
+				111927F91F7F5C10004F1F52 /* Resources */,
+				0CBEE0A79EDE57EF39D16023 /* [CP] Embed Pods Frameworks */,
+				E86238F53F1BD480F5CF3D92 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "frp-study";
+			productName = "frp-study";
+			productReference = 111927FB1F7F5C10004F1F52 /* frp-study.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1119280E1F7F5C11004F1F52 /* frp-studyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 111928261F7F5C11004F1F52 /* Build configuration list for PBXNativeTarget "frp-studyTests" */;
+			buildPhases = (
+				4EAA55220143CDE8872E687D /* [CP] Check Pods Manifest.lock */,
+				1119280B1F7F5C11004F1F52 /* Sources */,
+				1119280C1F7F5C11004F1F52 /* Frameworks */,
+				1119280D1F7F5C11004F1F52 /* Resources */,
+				5EAD354B7B092F6441FB7ECA /* [CP] Embed Pods Frameworks */,
+				D4CF8C35370DC6730BC8EC7F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				111928111F7F5C11004F1F52 /* PBXTargetDependency */,
+			);
+			name = "frp-studyTests";
+			productName = "frp-studyTests";
+			productReference = 1119280F1F7F5C11004F1F52 /* frp-studyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		111928191F7F5C11004F1F52 /* frp-studyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 111928291F7F5C11004F1F52 /* Build configuration list for PBXNativeTarget "frp-studyUITests" */;
+			buildPhases = (
+				3F98CAD4D5C61B5E511A42CB /* [CP] Check Pods Manifest.lock */,
+				111928161F7F5C11004F1F52 /* Sources */,
+				111928171F7F5C11004F1F52 /* Frameworks */,
+				111928181F7F5C11004F1F52 /* Resources */,
+				E6F363BFD76A2B36A658FF14 /* [CP] Embed Pods Frameworks */,
+				A3528DFCE09F9B84591D95F4 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1119281C1F7F5C11004F1F52 /* PBXTargetDependency */,
+			);
+			name = "frp-studyUITests";
+			productName = "frp-studyUITests";
+			productReference = 1119281A1F7F5C11004F1F52 /* frp-studyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		11CAD8981F9CC65E00B6A8DB /* frp-with-uiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11CAD8B21F9CC65E00B6A8DB /* Build configuration list for PBXNativeTarget "frp-with-uiTests" */;
+			buildPhases = (
+				11CAD8951F9CC65E00B6A8DB /* Sources */,
+				11CAD8961F9CC65E00B6A8DB /* Frameworks */,
+				11CAD8971F9CC65E00B6A8DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "frp-with-uiTests";
+			productName = "frp-with-uiTests";
+			productReference = 11CAD8991F9CC65E00B6A8DB /* frp-with-uiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		11CAD8A31F9CC65E00B6A8DB /* frp-with-uiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11CAD8B31F9CC65E00B6A8DB /* Build configuration list for PBXNativeTarget "frp-with-uiUITests" */;
+			buildPhases = (
+				11CAD8A01F9CC65E00B6A8DB /* Sources */,
+				11CAD8A11F9CC65E00B6A8DB /* Frameworks */,
+				11CAD8A21F9CC65E00B6A8DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "frp-with-uiUITests";
+			productName = "frp-with-uiUITests";
+			productReference = 11CAD8A41F9CC65E00B6A8DB /* frp-with-uiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		111927F31F7F5C10004F1F52 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = masaichi;
+				TargetAttributes = {
+					111927FA1F7F5C10004F1F52 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					1119280E1F7F5C11004F1F52 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 111927FA1F7F5C10004F1F52;
+					};
+					111928191F7F5C11004F1F52 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 111927FA1F7F5C10004F1F52;
+					};
+					11CAD8981F9CC65E00B6A8DB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 11CAD8851F9CC65E00B6A8DB;
+					};
+					11CAD8A31F9CC65E00B6A8DB = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 11CAD8851F9CC65E00B6A8DB;
+					};
+				};
+			};
+			buildConfigurationList = 111927F61F7F5C10004F1F52 /* Build configuration list for PBXProject "frp-study" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 111927F21F7F5C10004F1F52;
+			productRefGroup = 111927FC1F7F5C10004F1F52 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				111927FA1F7F5C10004F1F52 /* frp-study */,
+				1119280E1F7F5C11004F1F52 /* frp-studyTests */,
+				111928191F7F5C11004F1F52 /* frp-studyUITests */,
+				11CAD8981F9CC65E00B6A8DB /* frp-with-uiTests */,
+				11CAD8A31F9CC65E00B6A8DB /* frp-with-uiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		111927F91F7F5C10004F1F52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				111928091F7F5C10004F1F52 /* LaunchScreen.storyboard in Resources */,
+				111928061F7F5C10004F1F52 /* Assets.xcassets in Resources */,
+				111928041F7F5C10004F1F52 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1119280D1F7F5C11004F1F52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		111928181F7F5C11004F1F52 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11CAD8971F9CC65E00B6A8DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11CAD8A21F9CC65E00B6A8DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CBEE0A79EDE57EF39D16023 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-frp-study/Pods-frp-study-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${BUILT_PRODUCTS_DIR}/SodiumSwift/SodiumSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SodiumSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-frp-study/Pods-frp-study-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F98CAD4D5C61B5E511A42CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-frp-studyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44B0CB28DFF78D0F50708F51 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-frp-study-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EAA55220143CDE8872E687D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-frp-studyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EAD354B7B092F6441FB7ECA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-frp-studyTests/Pods-frp-studyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3528DFCE09F9B84591D95F4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-frp-studyUITests/Pods-frp-studyUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4CF8C35370DC6730BC8EC7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-frp-studyTests/Pods-frp-studyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6F363BFD76A2B36A658FF14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-frp-studyUITests/Pods-frp-studyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E86238F53F1BD480F5CF3D92 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-frp-study/Pods-frp-study-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		111927F71F7F5C10004F1F52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				111928011F7F5C10004F1F52 /* ViewController.swift in Sources */,
+				111927FF1F7F5C10004F1F52 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1119280B1F7F5C11004F1F52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				111928141F7F5C11004F1F52 /* frp_studyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		111928161F7F5C11004F1F52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1119281F1F7F5C11004F1F52 /* frp_studyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11CAD8951F9CC65E00B6A8DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11CAD8A01F9CC65E00B6A8DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		111928111F7F5C11004F1F52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 111927FA1F7F5C10004F1F52 /* frp-study */;
+			targetProxy = 111928101F7F5C11004F1F52 /* PBXContainerItemProxy */;
+		};
+		1119281C1F7F5C11004F1F52 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 111927FA1F7F5C10004F1F52 /* frp-study */;
+			targetProxy = 1119281B1F7F5C11004F1F52 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		111928021F7F5C10004F1F52 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				111928031F7F5C10004F1F52 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		111928071F7F5C10004F1F52 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				111928081F7F5C10004F1F52 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		111928211F7F5C11004F1F52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		111928221F7F5C11004F1F52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		111928241F7F5C11004F1F52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CB63065561432CB7D6CBA12 /* Pods-frp-study.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZL4GULYHV;
+				INFOPLIST_FILE = "frp-study/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.factorial.frp-study";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		111928251F7F5C11004F1F52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72CDE1362296DA425211A220 /* Pods-frp-study.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZL4GULYHV;
+				INFOPLIST_FILE = "frp-study/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.factorial.frp-study";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		111928271F7F5C11004F1F52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE9C680D5884475681097AB2 /* Pods-frp-studyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZL4GULYHV;
+				INFOPLIST_FILE = "frp-studyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.factorial.frp-studyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/frp-study.app/frp-study";
+			};
+			name = Debug;
+		};
+		111928281F7F5C11004F1F52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74AA9067E946E434409F0CB5 /* Pods-frp-studyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZL4GULYHV;
+				INFOPLIST_FILE = "frp-studyTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.factorial.frp-studyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/frp-study.app/frp-study";
+			};
+			name = Release;
+		};
+		1119282A1F7F5C11004F1F52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FCB944FF326FB960B298BCF /* Pods-frp-studyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZL4GULYHV;
+				INFOPLIST_FILE = "frp-studyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.factorial.frp-studyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "frp-study";
+			};
+			name = Debug;
+		};
+		1119282B1F7F5C11004F1F52 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9EDD15C014E36E3A4D5B2E7 /* Pods-frp-studyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZL4GULYHV;
+				INFOPLIST_FILE = "frp-studyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.factorial.frp-studyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "frp-study";
+			};
+			name = Release;
+		};
+		11CAD8AD1F9CC65E00B6A8DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZL4GULYHV;
+				INFOPLIST_FILE = "frp-with-uiTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.factorial.frp-with-uiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/frp-with-ui.app/frp-with-ui";
+			};
+			name = Debug;
+		};
+		11CAD8AE1F9CC65E00B6A8DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZL4GULYHV;
+				INFOPLIST_FILE = "frp-with-uiTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.factorial.frp-with-uiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/frp-with-ui.app/frp-with-ui";
+			};
+			name = Release;
+		};
+		11CAD8AF1F9CC65E00B6A8DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZL4GULYHV;
+				INFOPLIST_FILE = "frp-with-uiUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.factorial.frp-with-uiUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "frp-with-ui";
+			};
+			name = Debug;
+		};
+		11CAD8B01F9CC65E00B6A8DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WZL4GULYHV;
+				INFOPLIST_FILE = "frp-with-uiUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.factorial.frp-with-uiUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "frp-with-ui";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		111927F61F7F5C10004F1F52 /* Build configuration list for PBXProject "frp-study" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				111928211F7F5C11004F1F52 /* Debug */,
+				111928221F7F5C11004F1F52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		111928231F7F5C11004F1F52 /* Build configuration list for PBXNativeTarget "frp-study" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				111928241F7F5C11004F1F52 /* Debug */,
+				111928251F7F5C11004F1F52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		111928261F7F5C11004F1F52 /* Build configuration list for PBXNativeTarget "frp-studyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				111928271F7F5C11004F1F52 /* Debug */,
+				111928281F7F5C11004F1F52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		111928291F7F5C11004F1F52 /* Build configuration list for PBXNativeTarget "frp-studyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1119282A1F7F5C11004F1F52 /* Debug */,
+				1119282B1F7F5C11004F1F52 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11CAD8B21F9CC65E00B6A8DB /* Build configuration list for PBXNativeTarget "frp-with-uiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11CAD8AD1F9CC65E00B6A8DB /* Debug */,
+				11CAD8AE1F9CC65E00B6A8DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11CAD8B31F9CC65E00B6A8DB /* Build configuration list for PBXNativeTarget "frp-with-uiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11CAD8AF1F9CC65E00B6A8DB /* Debug */,
+				11CAD8B01F9CC65E00B6A8DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 111927F31F7F5C10004F1F52 /* Project object */;
+}
