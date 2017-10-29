@@ -13,9 +13,17 @@ class Frp2_6MergeViewController: UIViewController {
     let triangle = UILabel()
     let hexagon = UILabel()
     let disposeBag = DisposeBag()
-    enum ShapeID {
+    enum ShapeID: CustomDebugStringConvertible {
         case triangle
         case hexagon
+        var debugDescription: String {
+            switch self {
+            case .triangle:
+                return "triangle"
+            case .hexagon:
+                return "hexagon"
+            }
+        }
     }
     enum Change {
         case selected([ShapeID])
@@ -46,7 +54,7 @@ class Frp2_6MergeViewController: UIViewController {
         let tappedOrigin = gestureRecognizer.rx.event
             .map { $0.location(in: view) }
         
-        let selectedShapes = BehaviorSubject<Set<ShapeID>>(value: Set<ShapeID>())
+        let selectedShapes = BehaviorRelay<Set<ShapeID>>(value: Set<ShapeID>())
         let selected = tappedOrigin
             .map { point -> [ShapeID] in
                 if triangle.frame.contains(point) {
@@ -87,7 +95,7 @@ class Frp2_6MergeViewController: UIViewController {
                 }
                 return result
             }
-            .bind(to: selectedShapes)
+            .bind(onNext: selectedShapes.accept)
             .disposed(by: disposeBag)
         let triangleColor = selectedShapes.map { $0.contains(ShapeID.triangle) ? UIColor.green : UIColor.white }
         let hexagonColor = selectedShapes.map { $0.contains(ShapeID.hexagon) ? UIColor.green : UIColor.white }
