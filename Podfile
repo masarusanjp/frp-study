@@ -10,21 +10,4 @@ target 'frp-study' do
   pod 'RxCocoa'
   pod 'RxTest'
 
-  # Pods for frp-study
-  target 'frp-with-ui' do
-    inherit! :search_paths
-    pod 'RxSwift'
-    pod 'RxCocoa'
-  end
-
-  target 'frp-studyTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'frp-studyUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
 end
