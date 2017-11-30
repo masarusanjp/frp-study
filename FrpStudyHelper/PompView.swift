@@ -24,9 +24,9 @@ public class PompView: UIView {
 
     public override func awakeFromNib() {
         super.awakeFromNib()
-        numberButtons = numberButtons.sorted { $0.tag > $1.tag }
-        fuelLabels = fuelLabels.sorted { $0.tag > $1.tag }
-        nozzleButtons = nozzleButtons.sorted { $0.tag > $1.tag }
+        numberButtons = numberButtons.sorted { $0.tag < $1.tag }
+        fuelLabels = fuelLabels.sorted { $0.tag < $1.tag }
+        nozzleButtons = nozzleButtons.sorted { $0.tag < $1.tag }
     }
     @IBAction func swapSelected(_ button: UIButton) {
         button.isSelected = !button.isSelected

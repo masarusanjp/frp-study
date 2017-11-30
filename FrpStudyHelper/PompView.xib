@@ -51,21 +51,21 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buh-9O-GTh">
-                    <rect key="frame" x="75" y="20" width="11" height="21"/>
+                    <rect key="frame" x="75" y="20" width="55" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWN-uT-K96">
-                    <rect key="frame" x="75" y="49" width="11" height="21"/>
+                    <rect key="frame" x="75" y="49" width="62" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ny7-ff-7yd">
-                    <rect key="frame" x="75" y="78" width="11" height="21"/>
+                    <rect key="frame" x="75" y="78" width="62" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -172,6 +172,9 @@
                     <state key="selected">
                         <color key="titleColor" red="1" green="0.49845609269688806" blue="0.30964771388667356" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
+                    <connections>
+                        <action selector="swapSelected:" destination="iN0-l3-epB" eventType="touchUpInside" id="96b-TX-Z1b"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wis-hY-qtc">
                     <rect key="frame" x="310" y="262" width="54" height="30"/>
@@ -180,6 +183,9 @@
                     <state key="selected">
                         <color key="titleColor" red="1" green="0.49845609269688806" blue="0.30964771388667356" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
+                    <connections>
+                        <action selector="swapSelected:" destination="iN0-l3-epB" eventType="touchUpInside" id="eJw-sS-Tmr"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FUEL 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0z-uQ-kG7">
                     <rect key="frame" x="309" y="205" width="56" height="21"/>

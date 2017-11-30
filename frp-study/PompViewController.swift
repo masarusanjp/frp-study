@@ -4,7 +4,7 @@ import RxCocoa
 import FrpStudyHelper
 
 protocol Pump {
-    
+    func create(inputs: Inputs, disposeBag: DisposeBag) -> Outputs
 }
 
 enum UpDown {
@@ -40,7 +40,7 @@ class Inputs {
         self.clearSale = clearSale
     }
 }
-enum Delivery {
+enum Delivery: String {
     case off, slow1, fast1, slow2, fast2, slow3, fast3
 }
 
@@ -57,7 +57,6 @@ class Outputs {
     let priceLCD3: BehaviorRelay<String>
     let beep: Signal<Void>
     let saleComplete: Signal<Sale>
-    let disposeBag: DisposeBag
     
     init(delivery: BehaviorRelay<Delivery> = BehaviorRelay(value: .off),
          presetLCD: BehaviorRelay<String> = BehaviorRelay(value: ""),
@@ -67,8 +66,7 @@ class Outputs {
          priceLCD2: BehaviorRelay<String> = BehaviorRelay(value: ""),
          priceLCD3: BehaviorRelay<String> = BehaviorRelay(value: ""),
          beep: Signal<Void> = .empty(),
-         saleComplete: Signal<Sale> = .empty(),
-         disposeBag: DisposeBag = DisposeBag()
+         saleComplete: Signal<Sale> = .empty()
          ) {
         self.delivery = delivery
         self.presetLCD = presetLCD
@@ -79,12 +77,21 @@ class Outputs {
         self.priceLCD3 = priceLCD3
         self.beep = beep
         self.saleComplete = saleComplete
-        self.disposeBag = DisposeBag()
     }
 }
 
-enum Fuel {
+enum Fuel: CustomStringConvertible {
     case one, two, three
+    var description: String {
+        switch self {
+        case .one:
+            return "1"
+        case .two:
+            return "2"
+        case .three:
+            return "3"
+        }
+    }
 }
 
 class LifeCycle {
@@ -148,55 +155,36 @@ class LifeCycle {
     }
 }
 
-class LifeCyclePump {
-    static func make(inputs: Inputs) -> Outputs {
-        let disposeBag = DisposeBag()
-        let lifeCycle = LifeCycle(nozzle1: inputs.nozzle1, nozzle2: inputs.nozzle2, nozzle3: inputs.nozzle3)
-        let delivery = BehaviorRelay<Delivery>(value: .off)
-        lifeCycle.fillActive
-            .map {
-                switch $0 {
-                case .some(.one):
-                    return Delivery.fast1
-                case .some(.two):
-                    return Delivery.fast2
-                case .some(.three):
-                    return Delivery.fast3
-                case .none:
-                    return Delivery.off
-                }
+class LifeCyclePump: Pump {
+    func create(inputs: Inputs, disposeBag: DisposeBag) -> Outputs {
+        let lc = LifeCycle(nozzle1: inputs.nozzle1,
+                                  nozzle2: inputs.nozzle2,
+                                  nozzle3: inputs.nozzle3)
+        let d = lc.fillActive.map { fuel -> Delivery in
+            switch fuel {
+            case .some(.one):
+                return .fast1
+            case .some(.two):
+                return .fast2
+            case .some(.three):
+                return .fast3
+            case .none:
+                return .off
             }
-            .bind(onNext: delivery.accept)
-            .disposed(by: disposeBag)
-        
-        let quantityLCD = BehaviorRelay<String>(value: "")
-        
-        let quantityLCD: Driver<String> = lifeCycle.fillActive
-            .map {
-                switch $0 {
-                case .some(.one):
-                    return "1"
-                case .some(.two):
-                    return "2"
-                case .some(.three):
-                    return "3"
-                case .none:
-                    return ""
-                }
-            }
-            .asDriver(onErrorDriveWith: .empty())
-        
-        return Outputs(delivery: delivery,
-                       presetLCD: BehaviorRelay<String>(value: ""),
-                       saleCostLCD: BehaviorRelay<String>(value: ""),
-                       saleQuantityLCD: quantityLCD,
-                       priceLCD1: BehaviorRelay<String>(value: ""),
-                       priceLCD2: BehaviorRelay<String>(value: ""),
-                       priceLCD3: BehaviorRelay<String>(value: ""),
-                       beep: .empty(),
-                       saleComplete: .empty())
-    }
+        }
+        .asDriver(onErrorDriveWith: .empty())
+        let lcd = lc.fillActive.map { fuel -> String in
+            return fuel?.description ?? ""
+        }
+        .asDriver(onErrorDriveWith: .empty())
 
+        let dCell = BehaviorRelay<Delivery>(value: .off)
+        d.drive(dCell).disposed(by: disposeBag)
+        
+        let lcdCell = BehaviorRelay<String>(value: "")
+        lcd.drive(lcdCell).disposed(by: disposeBag)
+        return Outputs(delivery: dCell, saleQuantityLCD: lcdCell)
+    }
 }
 
 class PompViewController: UIViewController {
@@ -232,5 +220,13 @@ class PompViewController: UIViewController {
         
         let inputs = Inputs(nozzle1: nozzle1, nozzle2: nozzle2, nozzle3: nozzle3, keyPad: keyPad, fuelPulses: fuelPulses, calibration: calibration, price1: price1, price2: price2, price3: price3, clearSale: clearSale)
         
+        let lifeCyclePumpOutputs = LifeCyclePump().create(inputs: inputs, disposeBag: disposeBag)
+        lifeCyclePumpOutputs.presetLCD
+            .bind(to: v.litersLabel.rx.text)
+            .disposed(by: disposeBag)
+        lifeCyclePumpOutputs.delivery
+            .map { $0.rawValue }
+            .bind(to: v.dollarsLabel.rx.text)
+            .disposed(by: disposeBag)
     }
 }
