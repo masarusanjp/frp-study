@@ -37,11 +37,11 @@ class Fill {
                              price2: BehaviorRelay<Double>,
                              price3: BehaviorRelay<Double>,
                              disposeBag: DisposeBag) -> BehaviorRelay<Double> {
-        let sPrice1 = sStart.asObservable().withLatestFrom(price1) { $0 == .one ? $1 : 0 }.asSignal(onErrorJustReturn: 0)
-        let sPrice2 = sStart.asObservable().withLatestFrom(price2) { $0 == .two ? $1 : 0 }.asSignal(onErrorJustReturn: 0)
-        let sPrice3 = sStart.asObservable().withLatestFrom(price3) { $0 == .three ? $1 : 0 }.asSignal(onErrorJustReturn: 0)
+        let sPrice1 = sStart.asObservable().withLatestFrom(price1) { $0 == .one ? $1 : nil }.asSignal(onErrorJustReturn: nil)
+        let sPrice2 = sStart.asObservable().withLatestFrom(price2) { $0 == .two ? $1 : nil }.asSignal(onErrorJustReturn: nil)
+        let sPrice3 = sStart.asObservable().withLatestFrom(price3) { $0 == .three ? $1 : nil }.asSignal(onErrorJustReturn: nil)
         let capturedPrice = BehaviorRelay<Double>(value: 0)
-        Signal<Double>.merge([sPrice1, sPrice2, sPrice3])
+        Signal<Double?>.merge([sPrice1, sPrice2, sPrice3]).filter { $0 != nil }.map { $0! }
             .emit(onNext: capturedPrice.accept)
             .disposed(by: disposeBag)
         return capturedPrice

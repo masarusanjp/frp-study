@@ -9,5 +9,7 @@
         <page name='2-9 accumulator'/>
         <page name='3-1 spinner'/>
         <page name='4-1 pomp'/>
+        <page name='4-6 accumulate pulses pomp'/>
+        <page name='4-8 show dollars pomp'/>
     </pages>
 </playground>
