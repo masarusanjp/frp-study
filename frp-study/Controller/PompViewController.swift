@@ -3,55 +3,7 @@ import RxSwift
 import RxCocoa
 import FrpStudyHelper
 
-class AccumulatePulsesPump: Pump {
-    func create(inputs: Inputs, disposeBag: DisposeBag) -> Outputs {
-        let lc = LifeCycle(nozzle1: inputs.nozzle1,
-                                  nozzle2: inputs.nozzle2,
-                                  nozzle3: inputs.nozzle3)
-        let d = lc.fillActive.map { fuel -> Delivery in
-            switch fuel {
-            case .some(.one):
-                return .fast1
-            case .some(.two):
-                return .fast2
-            case .some(.three):
-                return .fast3
-            case .none:
-                return .off
-            }
-        }
-        .asDriver(onErrorDriveWith: .empty())
-        let lcd = lc.fillActive.map { fuel -> String in
-            return fuel?.description ?? ""
-        }
-        .asDriver(onErrorDriveWith: .empty())
-
-        let dCell = BehaviorRelay<Delivery>(value: .off)
-        d.drive(dCell).disposed(by: disposeBag)
-        
-        let lcdCell = BehaviorRelay<String>(value: "")
-        lcd.drive(lcdCell).disposed(by: disposeBag)
-        return Outputs(delivery: dCell, saleQuantityLCD: lcdCell)
-    }
-
-    static func accumulate(sClearAccumulator: Signal<Void>,
-                           sPulses: Signal<Double>,
-                           calibration: BehaviorRelay<Double>,
-                           disposeBag: DisposeBag) -> BehaviorRelay<Double> {
-        let total = BehaviorRelay<Double>(value: 0)
-        Signal<Double>.combineLatest(
-            Signal<Double>.merge(
-                sClearAccumulator.map { _ in 0 },
-                sPulses.withLatestFrom(total.asSignal(onErrorJustReturn: 0)) { $0 + $1 }
-            ),
-            calibration.asSignal(onErrorJustReturn: 0)) { $0 * $1 }
-            .emit(onNext: total.accept)
-            .disposed(by: disposeBag)
-        return total
-    }
-}
-
-class AccumulatePulsesPumpViewController: UIViewController {
+class PompViewController: UIViewController {
     let disposeBag = DisposeBag()
     override func loadView() {
         super.loadView()
