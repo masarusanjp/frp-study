@@ -242,7 +242,8 @@ class AccumulatePulsesPumpViewController: UIViewController {
         let nozzle2: Signal<UpDown> = converToUpDownSignal(v.nozzleButtons[1])
         let nozzle3: Signal<UpDown> = converToUpDownSignal(v.nozzleButtons[2])
         let keyPad: Signal<Key> = Signal<Key>.merge(v.numberButtons.map { btn in btn.rx.tap.map { Key(rawValue: btn.tag)! }.asSignal(onErrorSignalWith: .empty()) })
-        let fuelPulses: Signal<Int> = .empty()
+        let fuelPulsesRelay = PublishRelay<Int>()
+        let fuelPulses: Signal<Int> = fuelPulsesRelay.asSignal()
         let calibration = BehaviorRelay<Double>(value: 1.0)
         let price1 = BehaviorRelay<Double>(value: 1.0)
         let price2 = BehaviorRelay<Double>(value: 2.0)
@@ -259,6 +260,15 @@ class AccumulatePulsesPumpViewController: UIViewController {
             .map { $0.rawValue }
             .bind(to: v.presetLabel.rx.text)
             .disposed(by: disposeBag)
+
+        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { _ in
+            switch accumulatePulsesPump.delivery.value {
+            case .off:
+                break
+            default:
+                fuelPulsesRelay.accept(20)
+            }
+        }
     }
 }
 
