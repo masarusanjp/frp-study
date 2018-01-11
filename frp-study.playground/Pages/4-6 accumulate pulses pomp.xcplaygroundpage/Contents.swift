@@ -1,6 +1,10 @@
+//: [Previous](@previous)
+
 import UIKit
 import RxSwift
 import RxCocoa
+import XCPlayground
+import PlaygroundSupport
 import FrpStudyHelper
 
 protocol Pump {
@@ -67,7 +71,7 @@ class Outputs {
          priceLCD3: BehaviorRelay<String> = BehaviorRelay(value: ""),
          beep: Signal<Void> = .empty(),
          saleComplete: Signal<Sale> = .empty()
-         ) {
+        ) {
         self.delivery = delivery
         self.presetLCD = presetLCD
         self.saleCostLCD = saleCostLCD
@@ -121,8 +125,7 @@ class LifeCycle {
             }
             .asSignal(onErrorSignalWith: .empty())
     }
-    init(nozzle1: Signal<UpDown>, nozzle2: Signal<UpDown>, nozzle3: Signal<UpDown>) {
-        let disposeBag = DisposeBag()
+    init(nozzle1: Signal<UpDown>, nozzle2: Signal<UpDown>, nozzle3: Signal<UpDown>, disposeBag: DisposeBag) {
         let liftNozzle = Signal<Fuel>.merge(
             LifeCycle.whenLifted(for: nozzle1, fuel: Fuel.one),
             LifeCycle.whenLifted(for: nozzle2, fuel: Fuel.two),
@@ -155,11 +158,22 @@ class LifeCycle {
     }
 }
 
-class LifeCyclePump: Pump {
+struct Formatters {
+    static func formatSaleQuantity(quantity: Double) -> String {
+        return String(format: "%.2f", quantity)
+    }
+}
+
+class AccumulatePulsesPump: Pump {
     func create(inputs: Inputs, disposeBag: DisposeBag) -> Outputs {
         let lc = LifeCycle(nozzle1: inputs.nozzle1,
-                                  nozzle2: inputs.nozzle2,
-                                  nozzle3: inputs.nozzle3)
+                           nozzle2: inputs.nozzle2,
+                           nozzle3: inputs.nozzle3,
+                           disposeBag: disposeBag)
+        let littersDelivered = AccumulatePulsesPump.accumulate(sClearAccumulator: lc.start.map { _ in },
+                                                               sPulses: inputs.fuelPulses,
+                                                               calibration: inputs.calibration,
+                                                               disposeBag: disposeBag)
         let d = lc.fillActive.map { fuel -> Delivery in
             switch fuel {
             case .some(.one):
@@ -171,23 +185,39 @@ class LifeCyclePump: Pump {
             case .none:
                 return .off
             }
-        }
-        .asDriver(onErrorDriveWith: .empty())
-        let lcd = lc.fillActive.map { fuel -> String in
-            return fuel?.description ?? ""
-        }
-        .asDriver(onErrorDriveWith: .empty())
-
+            }
+            .asDriver(onErrorDriveWith: .empty())
         let dCell = BehaviorRelay<Delivery>(value: .off)
         d.drive(dCell).disposed(by: disposeBag)
-        
+
+        let lcd = littersDelivered.map { q -> String in
+            return Formatters.formatSaleQuantity(quantity: q)
+            }
+            .asDriver(onErrorDriveWith: .empty())
         let lcdCell = BehaviorRelay<String>(value: "")
         lcd.drive(lcdCell).disposed(by: disposeBag)
+
         return Outputs(delivery: dCell, saleQuantityLCD: lcdCell)
+    }
+
+    static func accumulate(sClearAccumulator: Signal<Void>,
+                           sPulses: Signal<Int>,
+                           calibration: BehaviorRelay<Double>,
+                           disposeBag: DisposeBag) -> BehaviorRelay<Double> {
+        let total = BehaviorRelay<Double>(value: 0)
+        Signal<Double>.combineLatest(
+            Signal<Double>.merge(
+                sClearAccumulator.map { _ in 0 },
+                sPulses.map { Double($0) }.withLatestFrom(total.asSignal(onErrorJustReturn: 0)) { $0 + $1 }
+            ),
+            calibration.asSignal(onErrorJustReturn: 0)) { $0 * $1 }
+            .emit(onNext: total.accept)
+            .disposed(by: disposeBag)
+        return total
     }
 }
 
-class PompViewController: UIViewController {
+class AccumulatePulsesPumpViewController: UIViewController {
     let disposeBag = DisposeBag()
     override func loadView() {
         super.loadView()
@@ -200,10 +230,11 @@ class PompViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         let v = view as! PompView
-        
+
         func converToUpDownSignal(_ button: UIButton) -> Signal<UpDown> {
             return button.rx
-                .observe(Bool.self, "isSelected")
+                .tap
+                .map { button.isSelected }
                 .map { ($0 ?? false) ? UpDown.up : UpDown.down }
                 .asSignal(onErrorSignalWith: .empty())
         }
@@ -211,22 +242,36 @@ class PompViewController: UIViewController {
         let nozzle2: Signal<UpDown> = converToUpDownSignal(v.nozzleButtons[1])
         let nozzle3: Signal<UpDown> = converToUpDownSignal(v.nozzleButtons[2])
         let keyPad: Signal<Key> = Signal<Key>.merge(v.numberButtons.map { btn in btn.rx.tap.map { Key(rawValue: btn.tag)! }.asSignal(onErrorSignalWith: .empty()) })
-        let fuelPulses: Signal<Int> = .empty()
+        let fuelPulsesRelay = PublishRelay<Int>()
+        let fuelPulses: Signal<Int> = fuelPulsesRelay.asSignal()
         let calibration = BehaviorRelay<Double>(value: 1.0)
         let price1 = BehaviorRelay<Double>(value: 1.0)
         let price2 = BehaviorRelay<Double>(value: 2.0)
         let price3 = BehaviorRelay<Double>(value: 3.0)
         let clearSale: Signal<Int> = .empty()
-        
+
         let inputs = Inputs(nozzle1: nozzle1, nozzle2: nozzle2, nozzle3: nozzle3, keyPad: keyPad, fuelPulses: fuelPulses, calibration: calibration, price1: price1, price2: price2, price3: price3, clearSale: clearSale)
-        
-        let lifeCyclePumpOutputs = LifeCyclePump().create(inputs: inputs, disposeBag: disposeBag)
-        lifeCyclePumpOutputs.presetLCD
-            .bind(to: v.litersLabel.rx.text)
-            .disposed(by: disposeBag)
-        lifeCyclePumpOutputs.delivery
-            .map { $0.rawValue }
+
+        let accumulatePulsesPump = AccumulatePulsesPump().create(inputs: inputs, disposeBag: disposeBag)
+        accumulatePulsesPump.saleQuantityLCD
             .bind(to: v.dollarsLabel.rx.text)
             .disposed(by: disposeBag)
+        accumulatePulsesPump.delivery
+            .map { $0.rawValue }
+            .bind(to: v.presetLabel.rx.text)
+            .disposed(by: disposeBag)
+
+        Timer.scheduledTimer(withTimeInterval: 0.2, repeats: true) { _ in
+            switch accumulatePulsesPump.delivery.value {
+            case .off:
+                break
+            default:
+                fuelPulsesRelay.accept(20)
+            }
+        }
     }
 }
+
+PlaygroundPage.current.liveView = AccumulatePulsesPumpViewController(nibName: nil, bundle: nil)
+
+//: [Next](@next)
