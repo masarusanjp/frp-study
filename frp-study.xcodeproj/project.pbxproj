@@ -18,8 +18,8 @@
 		119DA6081FB69C6C00CBC9B5 /* FrpStudyHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 119DA6061FB69C6C00CBC9B5 /* FrpStudyHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		119DA60B1FB69C6C00CBC9B5 /* FrpStudyHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119DA6041FB69C6C00CBC9B5 /* FrpStudyHelper.framework */; };
 		119DA60C1FB69C6C00CBC9B5 /* FrpStudyHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 119DA6041FB69C6C00CBC9B5 /* FrpStudyHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		119DA6131FB69C9700CBC9B5 /* PompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119DA6111FB69C9600CBC9B5 /* PompView.swift */; };
-		119DA6161FB69D4900CBC9B5 /* PompView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 119DA6121FB69C9700CBC9B5 /* PompView.xib */; };
+		32255E4D2009C38200971F94 /* PompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32255E4B2009C38200971F94 /* PompView.swift */; };
+		32255E4E2009C38200971F94 /* PompView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32255E4C2009C38200971F94 /* PompView.xib */; };
 		643019F71FD10096002D358E /* AccumulatePulsesPumpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643019F61FD10096002D358E /* AccumulatePulsesPumpViewController.swift */; };
 		6486F27D1FD78BDE0035C3CE /* ShowDollarsPumpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6486F27C1FD78BDE0035C3CE /* ShowDollarsPumpViewController.swift */; };
 		6486F27F1FD79AE70035C3CE /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6486F27E1FD79AE70035C3CE /* Formatters.swift */; };
@@ -90,12 +90,12 @@
 		119DA6041FB69C6C00CBC9B5 /* FrpStudyHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FrpStudyHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		119DA6061FB69C6C00CBC9B5 /* FrpStudyHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrpStudyHelper.h; sourceTree = "<group>"; };
 		119DA6071FB69C6C00CBC9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		119DA6111FB69C9600CBC9B5 /* PompView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PompView.swift; sourceTree = "<group>"; };
-		119DA6121FB69C9700CBC9B5 /* PompView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PompView.xib; sourceTree = "<group>"; };
 		11CAD8991F9CC65E00B6A8DB /* frp-with-uiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "frp-with-uiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11CAD8A41F9CC65E00B6A8DB /* frp-with-uiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "frp-with-uiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F33B111F7F6772000F691C /* frp-study.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "frp-study.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		1478FAB11A6AA47AE9E4E0E9 /* Pods_frp_studyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frp_studyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32255E4B2009C38200971F94 /* PompView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PompView.swift; sourceTree = "<group>"; };
+		32255E4C2009C38200971F94 /* PompView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PompView.xib; sourceTree = "<group>"; };
 		3CB63065561432CB7D6CBA12 /* Pods-frp-study.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frp-study.debug.xcconfig"; path = "Pods/Target Support Files/Pods-frp-study/Pods-frp-study.debug.xcconfig"; sourceTree = "<group>"; };
 		643019F61FD10096002D358E /* AccumulatePulsesPumpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccumulatePulsesPumpViewController.swift; sourceTree = "<group>"; };
 		6486F27C1FD78BDE0035C3CE /* ShowDollarsPumpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowDollarsPumpViewController.swift; sourceTree = "<group>"; };
@@ -229,8 +229,8 @@
 		119DA6051FB69C6C00CBC9B5 /* FrpStudyHelper */ = {
 			isa = PBXGroup;
 			children = (
-				119DA6111FB69C9600CBC9B5 /* PompView.swift */,
-				119DA6121FB69C9700CBC9B5 /* PompView.xib */,
+				32255E4B2009C38200971F94 /* PompView.swift */,
+				32255E4C2009C38200971F94 /* PompView.xib */,
 				119DA6061FB69C6C00CBC9B5 /* FrpStudyHelper.h */,
 				119DA6071FB69C6C00CBC9B5 /* Info.plist */,
 			);
@@ -430,6 +430,7 @@
 					};
 					119DA6031FB69C6C00CBC9B5 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					11CAD8981F9CC65E00B6A8DB = {
@@ -496,7 +497,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119DA6161FB69D4900CBC9B5 /* PompView.xib in Resources */,
+				32255E4E2009C38200971F94 /* PompView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,7 +618,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119DA6131FB69C9700CBC9B5 /* PompView.swift in Sources */,
+				32255E4D2009C38200971F94 /* PompView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -885,6 +886,7 @@
 		119DA60E1FB69C6C00CBC9B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -899,6 +901,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.factorial.FrpStudyHelper;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -909,6 +912,7 @@
 		119DA60F1FB69C6C00CBC9B5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

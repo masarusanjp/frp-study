@@ -16,7 +16,13 @@ public class PompView: UIView {
     @IBOutlet public var dollarsLabel: UILabel!
     @IBOutlet public var fuelLabels: [UILabel] = []
     @IBOutlet public var nozzleButtons: [UIButton] = []
-    
+    @IBOutlet public var fuelLabel: UILabel!
+    @IBOutlet public var priceLabel: UILabel!
+    @IBOutlet public var dollarsDeliveredLabel: UILabel!
+    @IBOutlet public var litersDeliveredLabel: UILabel!
+    @IBOutlet public var saleOKButton: UIButton!
+    @IBOutlet public var saleCompleteView: UIView!
+
     public static func make() -> PompView {
         let bundle = Bundle(for: PompView.self)
         return bundle.loadNibNamed("PompView", owner: nil, options: [:])![0] as! PompView
