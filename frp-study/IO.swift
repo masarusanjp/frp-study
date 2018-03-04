@@ -8,15 +8,26 @@ enum UpDown {
 }
 
 enum Key: Int {
-    case zero, one, two, three, four, five, six, seven, eight, nine
+    case zero = 0, one, two, three, four, five, six, seven, eight, nine
+    case clear = -1
 }
-
 
 enum Delivery: String {
     case off, slow1, fast1, slow2, fast2, slow3, fast3
 }
 
-protocol Sale {
+class Sale {
+    let fuel: Fuel
+    let price: Double
+    let cost: Double
+    let quantity: Double
+    
+    init(fuel: Fuel, price: Double, cost: Double, quantity: Double) {
+        self.fuel = fuel
+        self.price = price
+        self.cost = cost
+        self.quantity = quantity
+    }
 }
 
 enum Fuel: CustomStringConvertible {
@@ -76,6 +87,39 @@ class Outputs {
          priceLCD1: BehaviorRelay<String> = BehaviorRelay(value: ""),
          priceLCD2: BehaviorRelay<String> = BehaviorRelay(value: ""),
          priceLCD3: BehaviorRelay<String> = BehaviorRelay(value: ""),
+         beep: Signal<Void> = .empty(),
+         saleComplete: Signal<Sale> = .empty()
+        ) {
+        self.delivery = delivery
+        self.presetLCD = presetLCD
+        self.saleCostLCD = saleCostLCD
+        self.saleQuantityLCD = saleQuantityLCD
+        self.priceLCD1 = priceLCD1
+        self.priceLCD2 = priceLCD2
+        self.priceLCD3 = priceLCD3
+        self.beep = beep
+        self.saleComplete = saleComplete
+    }
+}
+
+class Outputs2 {
+    let delivery: Driver<Delivery>
+    let presetLCD: Driver<String>
+    let saleCostLCD: Driver<String>
+    let saleQuantityLCD: Driver<String>
+    let priceLCD1: Driver<String>
+    let priceLCD2: Driver<String>
+    let priceLCD3: Driver<String>
+    let beep: Signal<Void>
+    let saleComplete: Signal<Sale>
+    
+    init(delivery: Driver<Delivery> = .empty(),
+         presetLCD: Driver<String> = .empty(),
+         saleCostLCD: Driver<String> = .empty(),
+         saleQuantityLCD: Driver<String> = .empty(),
+         priceLCD1: Driver<String> = .empty(),
+         priceLCD2: Driver<String> = .empty(),
+         priceLCD3: Driver<String> = .empty(),
          beep: Signal<Void> = .empty(),
          saleComplete: Signal<Sale> = .empty()
         ) {
