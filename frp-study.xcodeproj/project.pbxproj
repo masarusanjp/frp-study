@@ -15,9 +15,14 @@
 		111928141F7F5C11004F1F52 /* frp_studyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111928131F7F5C11004F1F52 /* frp_studyTests.swift */; };
 		1119281F1F7F5C11004F1F52 /* frp_studyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1119281E1F7F5C11004F1F52 /* frp_studyUITests.swift */; };
 		113075A21FB6BE9E0020BE7B /* PompViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113075A11FB6BE9E0020BE7B /* PompViewController.swift */; };
+		114B9E142039AF56005EAA16 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114B9E132039AF56005EAA16 /* Preset.swift */; };
+		114BB24D204B922900431C76 /* PresetAmountPump.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114BB24C204B922900431C76 /* PresetAmountPump.swift */; };
+		114BB24F204B944700431C76 /* NotifyPointOfSale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114BB24E204B944700431C76 /* NotifyPointOfSale.swift */; };
+		114BB251204B965F00431C76 /* Keypad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114BB250204B965F00431C76 /* Keypad.swift */; };
 		119DA6081FB69C6C00CBC9B5 /* FrpStudyHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 119DA6061FB69C6C00CBC9B5 /* FrpStudyHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		119DA60B1FB69C6C00CBC9B5 /* FrpStudyHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 119DA6041FB69C6C00CBC9B5 /* FrpStudyHelper.framework */; };
 		119DA60C1FB69C6C00CBC9B5 /* FrpStudyHelper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 119DA6041FB69C6C00CBC9B5 /* FrpStudyHelper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		11A29B2E2025767600D87239 /* KeypadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A29B2D2025767600D87239 /* KeypadViewController.swift */; };
 		32255E4D2009C38200971F94 /* PompView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32255E4B2009C38200971F94 /* PompView.swift */; };
 		32255E4E2009C38200971F94 /* PompView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32255E4C2009C38200971F94 /* PompView.xib */; };
 		643019F71FD10096002D358E /* AccumulatePulsesPumpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643019F61FD10096002D358E /* AccumulatePulsesPumpViewController.swift */; };
@@ -87,9 +92,16 @@
 		1119281E1F7F5C11004F1F52 /* frp_studyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = frp_studyUITests.swift; sourceTree = "<group>"; };
 		111928201F7F5C11004F1F52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		113075A11FB6BE9E0020BE7B /* PompViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PompViewController.swift; sourceTree = "<group>"; };
+		114B9E132039AF56005EAA16 /* Preset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
+		114BB24C204B922900431C76 /* PresetAmountPump.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetAmountPump.swift; sourceTree = "<group>"; };
+		114BB24E204B944700431C76 /* NotifyPointOfSale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyPointOfSale.swift; sourceTree = "<group>"; };
+		114BB250204B965F00431C76 /* Keypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keypad.swift; sourceTree = "<group>"; };
+		114BB267204B9FDB00431C76 /* RxCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		114BB268204B9FDB00431C76 /* RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		119DA6041FB69C6C00CBC9B5 /* FrpStudyHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FrpStudyHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		119DA6061FB69C6C00CBC9B5 /* FrpStudyHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrpStudyHelper.h; sourceTree = "<group>"; };
 		119DA6071FB69C6C00CBC9B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11A29B2D2025767600D87239 /* KeypadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeypadViewController.swift; sourceTree = "<group>"; };
 		11CAD8991F9CC65E00B6A8DB /* frp-with-uiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "frp-with-uiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11CAD8A41F9CC65E00B6A8DB /* frp-with-uiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "frp-with-uiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F33B111F7F6772000F691C /* frp-study.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "frp-study.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -105,7 +117,7 @@
 		6486F2851FD79BAA0035C3CE /* ShowDollarsPump.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowDollarsPump.swift; sourceTree = "<group>"; };
 		6486F2871FD79BE90035C3CE /* Fill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fill.swift; sourceTree = "<group>"; };
 		6486F2891FD79C440035C3CE /* LifeCyclePump.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifeCyclePump.swift; sourceTree = "<group>"; };
-		6486F28B1FD79CAD0035C3CE /* LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LifeCycle.swift; path = "frp-study/LifeCycle.swift"; sourceTree = SOURCE_ROOT; };
+		6486F28B1FD79CAD0035C3CE /* LifeCycle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LifeCycle.swift; path = "frp-study/Module/LifeCycle.swift"; sourceTree = SOURCE_ROOT; };
 		6486F28D1FD79CF60035C3CE /* IO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
 		6D1ED3930A01E25DBCB032E9 /* Pods_frp_study.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_frp_study.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72CDE1362296DA425211A220 /* Pods-frp-study.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-frp-study.release.xcconfig"; path = "Pods/Target Support Files/Pods-frp-study/Pods-frp-study.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,15 +204,14 @@
 		111927FD1F7F5C10004F1F52 /* frp-study */ = {
 			isa = PBXGroup;
 			children = (
+				114B9E152039B3EA005EAA16 /* Module */,
 				111927FE1F7F5C10004F1F52 /* AppDelegate.swift */,
 				111928051F7F5C10004F1F52 /* Assets.xcassets */,
 				6486F28F1FD79D9E0035C3CE /* Controller */,
-				6486F2871FD79BE90035C3CE /* Fill.swift */,
 				6486F27E1FD79AE70035C3CE /* Formatters.swift */,
 				1119280A1F7F5C10004F1F52 /* Info.plist */,
 				6486F28D1FD79CF60035C3CE /* IO.swift */,
 				111928071F7F5C10004F1F52 /* LaunchScreen.storyboard */,
-				6486F28B1FD79CAD0035C3CE /* LifeCycle.swift */,
 				111928021F7F5C10004F1F52 /* Main.storyboard */,
 				6486F2821FD79B5F0035C3CE /* Pump */,
 				111928001F7F5C10004F1F52 /* ViewController.swift */,
@@ -226,6 +237,18 @@
 			path = "frp-studyUITests";
 			sourceTree = "<group>";
 		};
+		114B9E152039B3EA005EAA16 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				114B9E132039AF56005EAA16 /* Preset.swift */,
+				6486F2871FD79BE90035C3CE /* Fill.swift */,
+				6486F28B1FD79CAD0035C3CE /* LifeCycle.swift */,
+				114BB24E204B944700431C76 /* NotifyPointOfSale.swift */,
+				114BB250204B965F00431C76 /* Keypad.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
 		119DA6051FB69C6C00CBC9B5 /* FrpStudyHelper */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +267,7 @@
 				6486F2831FD79B7F0035C3CE /* Pump.swift */,
 				6486F2851FD79BAA0035C3CE /* ShowDollarsPump.swift */,
 				6486F2891FD79C440035C3CE /* LifeCyclePump.swift */,
+				114BB24C204B922900431C76 /* PresetAmountPump.swift */,
 			);
 			path = Pump;
 			sourceTree = "<group>";
@@ -254,6 +278,7 @@
 				643019F61FD10096002D358E /* AccumulatePulsesPumpViewController.swift */,
 				6486F27C1FD78BDE0035C3CE /* ShowDollarsPumpViewController.swift */,
 				113075A11FB6BE9E0020BE7B /* PompViewController.swift */,
+				11A29B2D2025767600D87239 /* KeypadViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -272,6 +297,8 @@
 		D78DAC8C7FC52E6430A36150 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				114BB267204B9FDB00431C76 /* RxCocoa.framework */,
+				114BB268204B9FDB00431C76 /* RxSwift.framework */,
 				6D1ED3930A01E25DBCB032E9 /* Pods_frp_study.framework */,
 				1478FAB11A6AA47AE9E4E0E9 /* Pods_frp_studyTests.framework */,
 				E19C998ABE141646A95755AE /* Pods_frp_studyUITests.framework */,
@@ -584,12 +611,17 @@
 			files = (
 				6486F2881FD79BE90035C3CE /* Fill.swift in Sources */,
 				6486F2811FD79B180035C3CE /* AccumulatePulsesPump.swift in Sources */,
+				11A29B2E2025767600D87239 /* KeypadViewController.swift in Sources */,
 				6486F27F1FD79AE70035C3CE /* Formatters.swift in Sources */,
 				643019F71FD10096002D358E /* AccumulatePulsesPumpViewController.swift in Sources */,
+				114BB251204B965F00431C76 /* Keypad.swift in Sources */,
 				113075A21FB6BE9E0020BE7B /* PompViewController.swift in Sources */,
 				6486F28E1FD79CF60035C3CE /* IO.swift in Sources */,
+				114B9E142039AF56005EAA16 /* Preset.swift in Sources */,
+				114BB24F204B944700431C76 /* NotifyPointOfSale.swift in Sources */,
 				111928011F7F5C10004F1F52 /* ViewController.swift in Sources */,
 				6486F27D1FD78BDE0035C3CE /* ShowDollarsPumpViewController.swift in Sources */,
+				114BB24D204B922900431C76 /* PresetAmountPump.swift in Sources */,
 				111927FF1F7F5C10004F1F52 /* AppDelegate.swift in Sources */,
 				6486F28A1FD79C440035C3CE /* LifeCyclePump.swift in Sources */,
 				6486F2861FD79BAA0035C3CE /* ShowDollarsPump.swift in Sources */,

@@ -9,7 +9,6 @@ class LifeCycle {
     let start: Signal<Fuel>
     let end: Signal<End>
     let fillActive: BehaviorRelay<Fuel?>
-    let disposeBag: DisposeBag
 
     static func whenLifted(for nozzle: Signal<UpDown>, fuel: Fuel) -> Signal<Fuel> {
         return nozzle.filter { $0 == .up }.map { _ in fuel }
@@ -29,8 +28,7 @@ class LifeCycle {
             }
             .asSignal(onErrorSignalWith: .empty())
     }
-    init(nozzle1: Signal<UpDown>, nozzle2: Signal<UpDown>, nozzle3: Signal<UpDown>) {
-        let disposeBag = DisposeBag()
+    init(nozzle1: Signal<UpDown>, nozzle2: Signal<UpDown>, nozzle3: Signal<UpDown>, disposeBag: DisposeBag) {
         let liftNozzle = Signal<Fuel>.merge(
             LifeCycle.whenLifted(for: nozzle1, fuel: Fuel.one),
             LifeCycle.whenLifted(for: nozzle2, fuel: Fuel.two),
@@ -58,7 +56,6 @@ class LifeCycle {
 
         self.start = start
         self.end = end
-        self.disposeBag = disposeBag
         self.fillActive = fillActive
     }
 }

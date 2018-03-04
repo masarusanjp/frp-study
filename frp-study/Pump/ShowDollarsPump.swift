@@ -6,7 +6,8 @@ class ShowDollarsPump: Pump {
     func create(inputs: Inputs, disposeBag: DisposeBag) -> Outputs {
         let lc = LifeCycle(nozzle1: inputs.nozzle1,
                            nozzle2: inputs.nozzle2,
-                           nozzle3: inputs.nozzle3)
+                           nozzle3: inputs.nozzle3,
+                           disposeBag: disposeBag)
         let fill = Fill(sClearAccumulator: lc.start.map { _ in },
                         sFuelPulses: inputs.fuelPulses,
                         calibration: inputs.calibration,
