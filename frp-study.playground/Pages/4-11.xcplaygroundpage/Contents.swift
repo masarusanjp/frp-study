@@ -202,12 +202,15 @@ class Fill {
                                   price2: price2,
                                   price3: price3,
                                   disposeBag: disposeBag)
+
         litersDelivered = accumulate(sClearAccumulator: sClearAccumulator,
                                      sPulses: sFuelPulses,
                                      calibration: calibration,
                                      disposeBag: disposeBag)
+
         let dollersDelivered = BehaviorRelay<Double>(value: 0)
-        Observable<Double>.combineLatest(litersDelivered, price) { $0 * $1 }
+        Observable<Double>
+            .combineLatest(litersDelivered, price) { $0 * $1 }
             .asSignal(onErrorJustReturn: 0)
             .emit(onNext: dollersDelivered.accept)
             .disposed(by: disposeBag)
@@ -490,6 +493,7 @@ class PresetAmountPump: Pump {
                                                   sClearSale: inputs.clearSale.map { _ in },
                                                   fi: fill,
                                                   disposeBag: disposeBag)
+        notifyPointOfSale.sStart.emit(to: start).disposed(by: disposeBag)
         let keypadActive = BehaviorRelay<Bool>(value: false)
         let keypad = Keypad(keypad: inputs.keyPad, clear: .never(), disposeBag: disposeBag)
         let preset = Preset(
@@ -531,6 +535,7 @@ class PresetAmountPumpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         view.backgroundColor = UIColor.white
         let v = view as! PompView
         
